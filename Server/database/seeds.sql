@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS habits;
 CREATE TABLE habits (
     id serial PRIMARY KEY,
     name varchar(50) NOT NULL,
-    count INTEGER DEFAULT 0
+    count INTEGER DEFAULT 0,
+    frequency INTEGER
 );
 
 -- CREATE TABLE users (
@@ -13,5 +14,5 @@ CREATE TABLE habits (
 --     password varchar(100) NOT NULL
 -- );
 
-INSERT INTO habits (name)
-VALUES ('Exercise');
+INSERT INTO habits (name, frequency)
+VALUES ('Exercise', 20);
