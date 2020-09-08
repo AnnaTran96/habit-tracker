@@ -5,13 +5,11 @@ class AddNewCard extends Component {
     state = {
         name:"",
         frequency:"",
-        
     }
 
     handleChange = e => {
         this.setState({ habit: e.target.habit.value })
-        this.setState({ frequency: e.target.frequency.value })
-        
+        this.setState({ frequency: e.target.frequency.value }) 
     }
 
     handleSubmit = e => {
@@ -19,6 +17,7 @@ class AddNewCard extends Component {
         
         const data = {
             name: e.target.name.value,
+            frequency: e.target.frequency.value
         }
     
         const options = {
@@ -38,14 +37,21 @@ class AddNewCard extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type='text' id="name" placeholder='Enter Habit'onChange={this.handleChange}></input>
-                    <input type='number' id='frequency' placeholder='Enter Frequency' onChange={this.handleChange}></input>
+                    <input type='text' id="name" placeholder='Enter Habit'onChange={this.handleChange}></input><br></br>
+            
+                    <label>Select No. of Frequency: </label> <br/>
+                            <select name="frequency" id ='frequency' onChange={this.handleChange}>
+                                <option value="" selected disabled>Please select an option</option>
+                                <option value = "100"> 1 </option>
+                                <option value = "50"> 2 </option>
+                                <option value = "20"> 5 </option>
+                            </select>
+
                     <input type='submit'/>
                 </form>
             </div>
         )
     }
-
 }
 
 export default withRouter(AddNewCard)
