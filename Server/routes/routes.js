@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    db.run(create, [req.body.name, 0])
+    db.run(create, [req.body.name, 0, req.body.frequency])
         .then(result => {
             const habit = result.rows[0]
             res.status(201).json(habit)
