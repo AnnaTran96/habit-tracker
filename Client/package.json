@@ -8,12 +8,17 @@
     "start": "webpack-dev-server --mode-development",
     "build": "webpack -p"
   },
+  "browser":{
+    "fs":"false"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "axios": "^0.20.0",
+    "firebase": "^7.19.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
