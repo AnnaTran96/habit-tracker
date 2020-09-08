@@ -5,8 +5,10 @@ CREATE TABLE habits (
     id serial PRIMARY KEY,
     name varchar(50) NOT NULL,
     count INTEGER DEFAULT 0,
-    frequency INTEGER
+    frequency INTEGER,
+    disable BOOLEAN DEFAULT false
 );
+
 
 -- CREATE TABLE users (
 --     id serial PRIMARY KEY,

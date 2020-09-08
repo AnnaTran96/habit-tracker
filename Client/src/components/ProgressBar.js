@@ -8,11 +8,11 @@ class Progress extends Component {
       this.state = {
         width: 0,
         text: "",
-        disable: false,
-        markedDate: moment(new Date()).format("dddd DD/MM/YYYY")
+        disable: false
+        // markedDate: moment(new Date()).format("dddd DD/MM/YYYY")
       }; 
 
-      this.handleClick = this.handleClick.bind(this);
+    //   this.handleClick = this.handleClick.bind(this);
     }
 
 
@@ -27,8 +27,6 @@ class Progress extends Component {
               return { width: state.width + this.props.frequency };
           }
         });
-
-
         e.preventDefault()
         const options = { 
             method: 'PATCH',
@@ -46,12 +44,12 @@ class Progress extends Component {
       };
     
       return (
-        <div className="wrapper" onClick={(e) => { this.handleClick(e); }}>
+        <div className="wrapper">
           {this.state.width + '%'}
           {this.state.text}
           <div className="bar" style={style} />
-          <button disabled={this.state.disable} frequency={this.props.frequency}>+</button>
-          <p>{this.state.markedDate}</p>
+          <button disabled={this.props.disable} frequency={this.props.frequency} onClick={(e) => { this.handleClick(e); }}>+</button>
+          {/* <p>{this.state.markedDate}</p> */}
         </div>
       );
     }

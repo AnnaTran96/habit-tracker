@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('../database/config');
-const { index, show, create, update } = require('../database/queries');
+const { index, show, create, update, updateDisable } = require('../database/queries');
 
 const router = express.Router();
 
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    db.run(create, [req.body.name, 0, req.body.frequency])
+    db.run(create, [req.body.name, 0, req.body.frequency, false])
         .then(result => {
             const habit = result.rows[0]
             res.status(201).json(habit)
@@ -33,6 +33,15 @@ router.post('/', (req, res) => {
 
 router.patch('/:id', (req, res) => {
     db.run(update, [req.params.id])
+        .then(result => {
+            const habit = result.rows[0]
+            res.json({habit})
+        })
+        .catch(err => res.status(500).end())
+})
+
+router.put('/:id', (req, res) => {
+    db.run(updateDisable, [req.params.id])
         .then(result => {
             const habit = result.rows[0]
             res.json({habit})
