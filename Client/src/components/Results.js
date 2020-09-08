@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router-dom'
-import Button from './Button'
+import ProgressCard from './ProgressBar'
 
 class Results extends Component{
-
-    state = { habitID: this.props.match.params.id }
-
 
     increaseCount = e => {
         e.preventDefault();
@@ -17,15 +14,13 @@ class Results extends Component{
             .catch(console.warn)
     }
 
-
-
     render(){
  
         const allData = this.props.results.map((item, idx) =>
             <div key={idx}>
                 <h2>{item.name}</h2>
-                <h2>{item.count}</h2>
-                <Button id={item.id}/>
+                <h2>Streak: {item.count}</h2>
+                <ProgressCard id={item.id} frequency={item.frequency}/>
             </div>) 
 
         return (
