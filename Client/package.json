@@ -8,8 +8,8 @@
     "start": "webpack-dev-server --mode-development",
     "build": "webpack -p"
   },
-  "browser":{
-    "fs":"false"
+  "browser": {
+    "fs": "false"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +18,14 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "axios": "^0.20.0",
+    "bootstrap-progress-bar": "^1.1.3",
     "firebase": "^7.19.1",
+    "mdbreact": "^4.27.0",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
+    "react-gradient-progress": "^1.0.3",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
