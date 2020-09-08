@@ -20,6 +20,10 @@ module.exports = {
       },
     ],
   },
+  // target: "node",
+  // node: {
+  //   fs: "empty"
+  // },
   devServer: {
     contentBase: path.resolve("src"),
     hot: true,
