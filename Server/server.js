@@ -13,9 +13,6 @@ server.use('/tracker', trackerRoutes)
 const practiceRoutes =require('./routes/practice')
 server.use('/practice', practiceRoutes) 
 
-const loginRoutes = require('./routes/login')
-server.use('/login', loginRoutes)
-
 const registerRoutes = require('./routes/register')
 server.use('/register', registerRoutes)
 
