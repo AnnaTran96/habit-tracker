@@ -6,4 +6,4 @@ function run(query, values, callback) {
     return pool.query(query, values, callback)
 }
 
-module.exports = { run };
+module.exports = { run, pool };
