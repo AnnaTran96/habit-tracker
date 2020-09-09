@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+
     bcrypt.hash(req.body.password, saltRounds).then(function(hash){
 
         db.run(userCreate, [req.body.email, hash])
@@ -25,9 +26,31 @@ router.post('/', (req, res) => {
         })
         .catch(err => res.status(500).end())
 
-    }) 
+    })
+    
             
 }) 
+
+// router.post('/login', (req, res, next) => {
+//     db.run(userIndex, [req.body.email])
+//       .then(resp => {
+//         if(resp.rows[0]) {
+//           bcrypt.compare(req.body.password, resp.rows[0].password)
+//             .then((result) => {
+//               if(result) {
+//                 res.json({
+//                   user_id: resp.rows[0].id,
+//                   message: 'Logged in! :unlock:'
+//                 })
+//               } else {
+//                 next(new Error('Wrong password'))
+//               }
+//             })
+//         } else {
+//           next(new Error('Username not found'))
+//         }
+//       })
+// })
 
 
    
