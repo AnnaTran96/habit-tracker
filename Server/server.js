@@ -10,6 +10,9 @@ const port = process.env.PORT || 3000;
 const trackerRoutes = require('./routes/routes')
 server.use('/tracker', trackerRoutes)
 
+const practiceRoutes =require('./routes/practice')
+server.use('/practice', practiceRoutes)
+
 
 // Root route
 server.get('/', (req, res) => res.send('Hello, Health Track!'))
