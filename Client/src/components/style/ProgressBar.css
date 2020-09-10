@@ -1,11 +1,12 @@
 .wrapper {
-    width: 50%;
+    width: 85%;
     height: 50px;
     background: #eee;
     cursor: pointer;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 30px;
   }
   
   .bar {

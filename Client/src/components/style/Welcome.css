@@ -1,0 +1,35 @@
+#background {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(52, 158, 140));
+    background-repeat: no-repeat;
+    /* background-color: gray; */
+}
+
+#site-title {
+    margin-top: 0;
+    padding: 20px;
+    color: white;
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-size: 60px;
+    position: relative;
+    top: 40%;
+    background-color:  rgb(52, 158, 140);
+    width: 700px;
+    left: 0;
+    /* transform: translateX(-50%) */
+}
+
+.links {
+    padding: 20px;
+    color: white;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#welcome-links {
+    margin-top: -80px;
+}

@@ -1,6 +1,12 @@
+.habits-nav {
+    display: block;
+    width: 100%;
+}
+
 .all-habits {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .results-container {
@@ -14,4 +20,16 @@
 .title, .streak {
     text-align: center;
     text-transform: capitalize;
+    color: white;
+}
+
+.streak {
+    font-size: 18px;
+}
+
+.habit-title {
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+    text-transform: uppercase;
 }

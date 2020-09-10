@@ -5,12 +5,15 @@ class Button extends Component {
 
     disable = (e)=>{
         e.preventDefault()
+
+      
         const options = { 
             method: 'PUT',
         };
         fetch(`http://localhost:3000/tracker/${this.props.id}`, options)
             .then(r => r.json())
             .catch(console.warn)
+
     }
 
     render(){

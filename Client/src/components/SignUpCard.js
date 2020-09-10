@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router";
+import './style/SignUpCard.css';
 
 class SignUpCard extends Component {
 
@@ -41,7 +42,8 @@ class SignUpCard extends Component {
 
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} id="register-form">
+                    <h3 className='create'> Create account</h3>
                     <input type='text' name='name' id='name' onChange={this.handleChange} placeholder='Name'></input>
                     <input type='text' name='email' id='email' onChange={this.handleChange} placeholder='Email'></input>
                     <input type='password' name='password' id='password' onChange={this.handleChange} placeholder='Password'></input>
