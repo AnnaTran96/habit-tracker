@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import './ProgressBar.css'
-import moment from 'moment'
+import './style/ProgressBar.css'
 
 class Progress extends Component {
     constructor(props) {
@@ -9,17 +8,17 @@ class Progress extends Component {
         width: 0,
         text: "",
         disable: false
-        // markedDate: moment(new Date()).format("dddd DD/MM/YYYY")
+
       }; 
 
-    //   this.handleClick = this.handleClick.bind(this);
+      // this.handleClick = this.handleClick.bind(this);
     }
 
 
     handleClick(e) {
 
         this.setState(state => {
-          if (state.width + this.props.frequency === 110) {
+          if (state.width + this.props.frequency === 105) {
             return { width: 0 };
           } else if (state.width === 100) {
                 return {text: 'Well Done!', disable: true } 
@@ -48,8 +47,7 @@ class Progress extends Component {
           {this.state.width + '%'}
           {this.state.text}
           <div className="bar" style={style} />
-          <button disabled={this.props.disable} frequency={this.props.frequency} onClick={(e) => { this.handleClick(e); }}>+</button>
-          {/* <p>{this.state.markedDate}</p> */}
+          <button className= "upBtn" disabled={this.props.disable} frequency={this.props.frequency} onClick={(e) => { this.handleClick(e) }}>+</button>
         </div>
       );
     }

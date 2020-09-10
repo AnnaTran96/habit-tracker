@@ -1,0 +1,17 @@
+.all-habits {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-container {
+    width: 300px;
+    background-color: rgb(124, 212, 201);
+    border: 1px solid rgb(124, 212, 201);
+    margin: 20px;
+    border-radius: 1rem;
+}
+
+.title, .streak {
+    text-align: center;
+    text-transform: capitalize;
+}

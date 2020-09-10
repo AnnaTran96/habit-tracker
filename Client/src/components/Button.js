@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './style/Button.css'
 
 class Button extends Component {
 
@@ -17,7 +17,7 @@ class Button extends Component {
 
         return (
             <div>
-                <button disabled ={this.props.disable} onClick={this.disable}>Click when complete</button>
+                <button className="clickBtn" disabled ={this.props.disable} onClick={this.disable}>Click when 100%</button>
             </div>
         )
 

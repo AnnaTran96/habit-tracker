@@ -1,0 +1,30 @@
+.wrapper {
+    width: 50%;
+    height: 50px;
+    background: #eee;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bar {
+    width: 0;
+    height: 20px;
+    transition: width 0.3s;
+    background: #ec6161;
+    margin: 6.5px 0;
+  }
+
+  .upBtn {
+    /* margin: 10px; */
+    margin-top: -10%;
+    color: white;
+    background-color: rgb(52, 158, 140);
+    width: 40px;
+    border: 1px solid rgb(52, 158, 140);
+    border-radius: 1rem;
+    /* position: relative;
+    left: 50%;
+    transform: translateX(-50%); */
+  }

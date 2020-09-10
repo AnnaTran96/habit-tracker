@@ -3,4 +3,6 @@ export { default as HabitCard } from './HabitCard'
 export { default as Authentication } from './Authentication'
 export { default as Results } from './Results'
 export { default as ProgressCard } from './ProgressBar'
-
+export { default as SignUpCard } from './SignUpCard'
+export { default as LoginCard } from './LoginCard.'
+export { default as NavBar } from './NavBar.'
