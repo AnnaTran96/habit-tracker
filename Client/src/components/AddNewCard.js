@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter } from "react-router";
+import NavBar from './NavBar'
 
 class AddNewCard extends Component {
     state = {
@@ -28,6 +29,7 @@ class AddNewCard extends Component {
     
         fetch('http://localhost:3000/tracker', options)
             .then(r => r.json())
+            .then(console.log(data))
             .then(this.props.history.push(`/habits`))
             .catch(console.warn)        
     }
@@ -36,6 +38,7 @@ class AddNewCard extends Component {
     render(){
         return(
             <div>
+                <NavBar></NavBar>
                 <form onSubmit={this.handleSubmit}>
                     <input type='text' id="name" placeholder='Enter Habit'onChange={this.handleChange}></input><br></br>
             

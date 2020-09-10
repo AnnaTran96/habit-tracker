@@ -1,3 +1,5 @@
 export { default as Login } from './Login'
 export { default as Habits } from './Habits'
 export { default as AddNew } from './AddNew'
+export { default as SignUp } from './SignUp'
+export { default as Welcome } from './Welcome'

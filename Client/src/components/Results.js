@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom'
 import ProgressCard from './ProgressBar'
 import Button from './Button'
 import ReverseButton from './ReverseButton';
+import NavBar from './NavBar'
+import './style/Results.css'
 
 class Results extends Component{
 
@@ -20,16 +22,18 @@ class Results extends Component{
     render(){
  
         const allData = this.props.results.map((item, idx) =>
-            <div key={idx}>
-                <h2>{item.name}</h2>
-                <h2>Streak: {item.count}</h2>
+            <div key={idx} className="results-container">
+                <h2 className="title">{item.name}</h2>
+                <h2 className="streak">Streak: {item.count}</h2>
                 <ProgressCard id={item.id} frequency={item.frequency} disable={item.disable}/><br></br>
                 <Button id={item.id} disable={item.disable}></Button>   
                 <ReverseButton id={item.id}></ReverseButton>
+                
             </div>) 
 
         return (
-            <div>
+            <div className="all-habits">
+                <NavBar></NavBar>
                 {allData} 
             </div>
         )
