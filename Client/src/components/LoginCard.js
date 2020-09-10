@@ -42,9 +42,9 @@ class LoginCard extends Component {
             <div>
                 <form onSubmit={this.handleSubmit} className="login-form">
                     <label>Email</label>
-                    <input type="text" name="email" onChange={this.handleChange}></input>
+                    <input type="text" name="email" id="email" onChange={this.handleChange}></input>
                     <label>Password</label>
-                    <input type="password" name="password"></input>
+                    <input type="password" name="password" onChange={this.handleChange} id="password"></input>
                     <input type='submit'></input>
                 </form>
             </div>

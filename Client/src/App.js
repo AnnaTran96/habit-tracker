@@ -6,7 +6,7 @@ import './App.css'
 export class App extends Component {
     render() {
         return (
-            <div>
+            <div id="app">
                 {/* <h1>Habit Tracker!</h1> */}
                 <Switch>
                     <Route exact path='/' component={ Welcome }/>
