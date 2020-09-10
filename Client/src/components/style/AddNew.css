@@ -1,0 +1,24 @@
+select {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 1rem;
+    border: solid 1px rgb(175, 175, 175);
+}
+
+.addNew-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    background-color:  rgb(124, 212, 201);
+    border: 1px solid rgb(124, 212, 201);
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+.addNew-title {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 50px 0;
+}

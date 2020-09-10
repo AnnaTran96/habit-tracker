@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter } from "react-router";
-import NavBar from './NavBar'
+import './style/AddNew.css'
 
 class AddNewCard extends Component {
     state = {
@@ -38,11 +38,11 @@ class AddNewCard extends Component {
     render(){
         return(
             <div>
-                <NavBar></NavBar>
-                <form onSubmit={this.handleSubmit}>
-                    <input type='text' id="name" placeholder='Enter Habit'onChange={this.handleChange}></input><br></br>
+                <form onSubmit={this.handleSubmit} className='addNew-form'>
+                    <label>Enter habit name</label>
+                    <input type='text' id="name" placeholder='Habit Name'onChange={this.handleChange}></input><br></br>
             
-                    <label>Select No. of Frequency: </label> <br/>
+                    <label>Select No. of Frequency </label> <br/>
                             <select name="frequency" id ='frequency' onChange={this.handleChange}>
                                 <option value="" selected disabled>Please select an option</option>
                                 <option value = "100"> 1 </option>

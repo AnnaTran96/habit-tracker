@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import './style/Login.css'
 
 class LoginCard extends Component {
 
@@ -39,7 +40,7 @@ class LoginCard extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="login-form">
                     <label>Email</label>
                     <input type="text" name="email" onChange={this.handleChange}></input>
                     <label>Password</label>

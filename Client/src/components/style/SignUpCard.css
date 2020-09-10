@@ -1,4 +1,4 @@
-.login-form {
+#register-form {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -6,9 +6,11 @@
     background-color:  rgb(124, 212, 201);
     border: 1px solid rgb(124, 212, 201);
     border-radius: 1rem;
-    padding: 20px;
 }
 
+.create{
+    text-align: center;
+}
 
 input {
     margin: 5px;
@@ -22,19 +24,21 @@ input {
     margin: 5px auto;
 }
 
-.login-title {
+.register {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     margin: 50px 0;
 }
 
-.login-text, .login-link {
+.register-text, .login-link {
     text-align: center;
     margin: 20px 0;
 }
 
-.logo {
+.logo{
+    background-color: rgb(124, 212, 201);
     font-size: 16px;
     padding: 10px;
+    color: white;
 }

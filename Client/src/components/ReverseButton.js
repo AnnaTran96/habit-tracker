@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './style/Button.css'
 
 class ReverseButton extends Component {
 
@@ -17,7 +17,7 @@ class ReverseButton extends Component {
 
         return (
             <div>
-                <button onClick={this.disable}>New Day</button>
+                <button onClick={this.disable} className="newDayBtn">New Day</button>
             </div>
         )
 
