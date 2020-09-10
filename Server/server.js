@@ -23,3 +23,5 @@ server.use('/login', loginRoutes)
 server.get('/', (req, res) => res.send('Hello, Health Track!'))
 
 server.listen(port, () => console.log(`Express now departing from http://localhost:${port}!`))
+
+module.exports = server;

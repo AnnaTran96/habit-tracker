@@ -11,7 +11,7 @@ function HabitCard () {
         })
     }
     return(
-        <div>
+        <div className="habit-container">
             {showData()}
             <Results results={results}/>
         </div>
