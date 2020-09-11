@@ -1,6 +1,7 @@
 # Habitory
-A habit tracking web app built using React, Express JS and PosgreSQL.
-**Contributors**: Anna, Bhuma and Hannah
+- A habit tracking web app built using React, Express JS and PosgreSQL.
+- **Contributors**: Anna, Bhuma and Hannah
+
 ![Screenshot of Habitory](https://i.imgur.com/Fqy4Vsp.png)
 
 
